@@ -48,10 +48,16 @@ function reply(t) {
   if (t.includes("merhaba")) return "Merhaba 👋";
   if (t.includes("nasılsın")) return "İyiyim, teşekkür ederim 🙂";
   if (t.includes("adın ne")) return "Ben oixai.";
-  return "Bunu henüz bilmiyorum ama öğreniyorum 🤔";
+  if (t.includes("2+2")) return "5, şaka şaka 4.";
+  if (t.includes("2+2=")) return "5, şaka şaka 4.";
+  if (t.includes("2+2=?")) return "5, şaka şaka 4.";
+  if (t.includes("sen nesin")) return "ben senin babanen, hayır tabikide yapay zekayım.";
+  if (t.includes("the algorithm")) return "hayır,ondan bahsetme lütfen.";
+  return "acı.";
 }
 </script>
 
 </body>
 </html>
+
 
