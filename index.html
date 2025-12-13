@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>oixai</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>oixai</title>
+<style>
+body { font-family: Arial; background:#f2f2f2; }
+.chat { width:320px; margin:50px auto; background:#fff; border-radius:10px; padding:10px; }
+.messages { height:300px; overflow:auto; border:1px solid #ccc; padding:5px; }
+.user { text-align:right; color:blue; margin:5px 0; }
+.bot { text-align:left; color:red; margin:5px 0; }
+input { width:75%; padding:5px; }
+button { width:20%; }
+</style>
 </head>
 <body>
 
-    <header>
-        <h1>oixai</h1>
-        <nav>
-            <a href="#">Anasayfa</a>
-        </nav>
-    </header>
+<div class="chat">
+  <h3>🤖 oixai</h3>
+  <div id="messages" class="messages"></div>
+  <input id="input" placeholder="Yaz..." />
+  <button onclick="send()">Gönder</button>
+</div>
 
-    <main>
-        <section>
-            <h2>oixai�</h2>
-            <p>acı çeken yapay zeka.</p>
-        </section>
-    </main>
+<script>
+function send() {
+  const input = document.getElementById("input");
+  const text = input.value.trim();
+  if (!text) return;
 
-    <footer>
-        <p></p>
-    </footer>
+  add(text, "user");
+  input.value = "";
+
+  setTimeout(() => {
+    add(reply(text), "bot");
+  }, 500);
+}
+
+function add(text, cls) {
+  const div = document.createElement("div");
+  div.className = cls;
+  div.innerText = text;
+  document.getElementById("messages").appendChild(div);
+}
+
+function reply(t) {
+  t = t.toLowerCase();
+  if (t.includes("merhaba")) return "Merhaba 👋";
+  if (t.includes("nasılsın")) return "İyiyim, teşekkür ederim 🙂";
+  if (t.includes("adın ne")) return "Ben oixai.";
+  return "Bunu henüz bilmiyorum ama öğreniyorum 🤔";
+}
+</script>
 
 </body>
 </html>
-
 
