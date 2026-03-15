@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>tuzla.ai</title>
+<title>tuzla.ai(by oixai project)</title>
 <style>
 body { font-family: Arial; background:#f2f2f2; }
 .chat { width:320px; margin:50px auto; background:#fff; border-radius:10px; padding:10px; }
@@ -16,12 +16,12 @@ button { width:20%; }
 <body>
 
 <div class="chat">
-  <h3>tuzla.ai</h3>
+  <h3>tuzla.ai(by oixai project)</h3>
   <div id="messages" class="messages"></div>
   <input id="input" placeholder="Yaz..." />
   <button onclick="send()">Yolla</button>
 </div>
-
+<a href="project-g.html" class="btn-project-g">Go To Project G</a>
 <script>
 function send() {
   const input = document.getElementById("input");
@@ -47,7 +47,7 @@ function reply(t) {
   t = t.toLowerCase();
   if (t.includes("merhaba")) return "Merhaba 👋";
   if (t.includes("nasılsın")) return "İyiyim, teşekkür ederim 🙂";
-  if (t.includes("adın ne")) return "Ben oixai.";
+  if (t.includes("adın ne")) return "Ben tuzla.";
   if (t.includes("2+2")) return "5, şaka şaka 4.";
   if (t.includes("2+2=")) return "5, şaka şaka 4.";
   if (t.includes("2+2=?")) return "5, şaka şaka 4.";
