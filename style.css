@@ -54,7 +54,7 @@ footer {
     border-radius: 5px;
     transition: 0.3s ease;
     text-transform: uppercase;
-    font-family: impact;
+    font-family: sans-serif;
 }
 
 .projectg-link:hover {
